@@ -70,31 +70,38 @@ Easy to setup and already have all the features for signup and signin with high 
 install dependencies:
 
 ```sh
-npm install // yarn 
+npm install 
 ```
 
 build app
 
 ```sh
-npm run build // yarn build
+npm run build 
 ```
 
 Run built 
 
 ```sh
-npm start // yarn start
+npm start
 ```
 
 Run localy
 
-to run localy you need to create `.env.local` file first and add two variables 
+to run localy you need to create `.env.development.local` file first and add two variables 
 ```
-API_KEY=your_api_key 
-BASE_URL=http://localhost:3000 // keep in mind the port might change
+AUTH_DOMAIN=<Auth0_Domain>
+AUTH_CLIENT_ID=<Auth0_client_id>
+AUTH_CLIENT_SECRET=<Auth0_client_secret>
+AUTH_REDIRECT_URI=<Auth0_Callback_URL>
+AUTH_POST_LOGOUT_REDIRECT_URI=<Localhost_URL>
+AUTH_COOKIE_SECRET=<Any_Random 32 character>
+AUTH_NAMESPACE=<Auth0_Namespace>
+AUTH_AUDIENCE=<Auth0_audience>
+API_URL=<Local Api path>
 ```
 
 ```sh
-npm run dev // yarn dev
+npm run dev 
 ```
 
 

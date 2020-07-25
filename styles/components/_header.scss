@@ -1,0 +1,18 @@
+// HEADER
+.admin-header {
+  padding-left: 265px;
+  position: fixed;
+  width: 100%;
+  .nav {
+    a {
+      color: #7E8299;
+    }
+    .dropdown-title {
+      font-weight: bold;
+      display: inline-block;
+      span {
+        font-weight: 200;
+      }
+    }
+  }
+}

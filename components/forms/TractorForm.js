@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 
-const TractorForm = ({onSubmit, data: initialData = {}}) => {
-  const { register, handleSubmit } = useForm({defaultValues: initialData});
+const TractorForm = ({ onSubmit, data: initialData = {} }) => {
+  const { register, handleSubmit } = useForm({ defaultValues: initialData });
 
-  return(
+  return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="form-group">
         <label htmlFor="name">Name</label>
@@ -12,14 +12,14 @@ const TractorForm = ({onSubmit, data: initialData = {}}) => {
           type="text"
           className="form-control"
           ref={register}
-          id="name"/>
+          id="name"
+        />
       </div>
-      <button
-        type="submit"
-        className="btn btn-primary">Create
+      <button type="submit" className="btn btn-primary">
+        Create
       </button>
-  </form>
-  )
-}
+    </form>
+  );
+};
 
 export default TractorForm;

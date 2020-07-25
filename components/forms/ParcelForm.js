@@ -1,12 +1,12 @@
 import { useForm } from "react-hook-form";
 
-const ParcelForm = ({onSubmit, data: initialData = {}}) => {
-  const { register, handleSubmit } = useForm({defaultValues: initialData});
+const ParcelForm = ({ onSubmit, data: initialData = {} }) => {
+  const { register, handleSubmit } = useForm({ defaultValues: initialData });
 
-  const submitForm = (data) =>{
-    onSubmit(data)
-  }
-  return(
+  const submitForm = (data) => {
+    onSubmit(data);
+  };
+  return (
     <form onSubmit={handleSubmit(submitForm)}>
       <div className="form-group">
         <label htmlFor="name">Name</label>
@@ -15,7 +15,8 @@ const ParcelForm = ({onSubmit, data: initialData = {}}) => {
           type="text"
           className="form-control"
           ref={register}
-          id="name"/>
+          id="name"
+        />
       </div>
       <div className="form-group">
         <label htmlFor="culture">Culture</label>
@@ -24,7 +25,8 @@ const ParcelForm = ({onSubmit, data: initialData = {}}) => {
           type="text"
           className="form-control"
           ref={register}
-          id="culture"/>
+          id="culture"
+        />
       </div>
       <div className="form-group">
         <label htmlFor="area">Area</label>
@@ -33,14 +35,14 @@ const ParcelForm = ({onSubmit, data: initialData = {}}) => {
           type="text"
           className="form-control"
           ref={register}
-          id="area"/>
+          id="area"
+        />
       </div>
-      <button
-        type="submit"
-        className="btn btn-primary">Create
+      <button type="submit" className="btn btn-primary">
+        Create
       </button>
-  </form>
-  )
-}
+    </form>
+  );
+};
 
 export default ParcelForm;

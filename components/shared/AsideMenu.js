@@ -1,8 +1,16 @@
-import Link from 'next/link'
-import { Nav } from 'reactstrap';
-import Aside from './Aside';
+import Link from "next/link";
+import { Nav } from "reactstrap";
+import Aside from "./Aside";
 
-const NavItem = ({title, link}) => <li className="menu-item"><Link href={link} ><a href="#" className="menu-link">{title}</a></Link></li>;
+const NavItem = ({ title, link }) => (
+  <li className="menu-item">
+    <Link href={link}>
+      <a href="#" className="menu-link">
+        {title}
+      </a>
+    </Link>
+  </li>
+);
 
 const AsideMenu = () => {
   return (
@@ -12,7 +20,7 @@ const AsideMenu = () => {
       <NavItem title="Proccess Parcel" link="/proccesing" />
       <NavItem title="Reports" link="/reports" />
     </Nav>
-  )
-}
+  );
+};
 
 export default AsideMenu;

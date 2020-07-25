@@ -16,7 +16,7 @@ export default async function handleParcels(req, res) {
       const { accessToken } = await auth0.getSession(req);
       const json = await new ParcelsApi(accessToken).update(
         req.query.id,
-        req.body,
+        req.body
       );
       return res.status(200).json(json.data);
     } catch (e) {

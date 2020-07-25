@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.11.0",
@@ -20,5 +21,8 @@
     "reactstrap": "^8.5.1",
     "sass": "^1.26.10",
     "swr": "^0.2.3"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
   }
 }

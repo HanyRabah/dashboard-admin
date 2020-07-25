@@ -1,25 +1,30 @@
-import React from 'react';
-import BaseLayout from '@/components/layouts/BaseLayout';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@/styles/main.scss';
+import React from "react";
+import { useGetUser } from "@/actions/user";
+import UserContext from "@/components/userContext";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@/styles/main.scss";
 import "react-datepicker/dist/react-datepicker.css";
 
 const App = (props) => {
-    const { Component, pageProps } = props;
-    return (
-      <BaseLayout>
-        <Component {...pageProps} />
-      </BaseLayout>
-    )
-}
+  const { data: user } = useGetUser();
+  const { Component, pageProps } = props;
 
-App.getInitialProps = async ({Component, ctx}) => {
+  return (
+    <UserContext.Provider value={{ user: user }}>
+      <div className="layout-container">
+        <Component {...pageProps} />
+      </div>
+    </UserContext.Provider>
+  );
+};
+
+App.getInitialProps = async ({ Component, ctx }) => {
   let pageProps = {};
 
-  if(Component.getInitialProps) {
-    pageProps = await Component.getInitialProps(ctx)
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
   }
-  return { pageProps }
-}
+  return { pageProps };
+};
 
 export default App;

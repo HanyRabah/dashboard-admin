@@ -16,6 +16,7 @@ Next.js App example for admin dashboard
   - Next.js
   - React
   - ES6
+  - ReactStrap
   - Auth0
   - Sass( css preprocessor )
   - React hook form

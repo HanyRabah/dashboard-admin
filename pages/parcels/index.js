@@ -32,6 +32,7 @@ export async function getStaticProps() {
   const json = await new ParcelApi().getAll();
   const parcels =  json.data;
   return {
-    props: { parcels }
+    props: { parcels },
+    unstable_revalidate: 30
   }
 }

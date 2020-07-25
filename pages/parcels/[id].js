@@ -3,8 +3,6 @@ import ParcelApi from "@/lib/api/ParcelsClass";
 
 
 const Parcel = ({ parcel }) => {
-  console.log("Parcel -> parcel", parcel)
-
   return (
     <BasePage title="Parcel Managment">
       <div>

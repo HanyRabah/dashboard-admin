@@ -35,6 +35,7 @@ export default Parcels;
 export async function getStaticProps() {
   const json = await new ProcessApi().getAll();
   return {
-    props: {  process: json.data }
+    props: {  process: json.data },
+    unstable_revalidate: 30
   }
 }

@@ -84,6 +84,7 @@ export async function getStaticProps() {
   })
 
   return {
-    props: {  reports: data }
+    props: {  reports: data },
+    unstable_revalidate: 30
   }
 }

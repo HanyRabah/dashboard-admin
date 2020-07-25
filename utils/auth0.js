@@ -23,7 +23,6 @@ export const isAuthorizedUser = (user, role) => {
 
  export const authorizeUser = async (req, res) => { 
   const session = await auth0.getSession(req);
-  console.log("authorizeUser -> session", session)
   
   if(!session || !session.user) {
     res.writeHead(302, { Location: '/api/v1/user/login' });

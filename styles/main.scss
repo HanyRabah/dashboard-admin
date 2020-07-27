@@ -1,11 +1,12 @@
 @import './shared/fonts';
+// pages
+@import './index';
+
 // components
 @import './components/header';
 @import './components/aside';
-
-// pages
-@import './index';
-@import './portfolios';
+@import './components/list';
+@import './components/no_item';
 
 html, body {
   font-family: 'Montserrat', 'Helvetica'!important;
@@ -16,48 +17,4 @@ html, body {
 
 .absolute {
   position: absolute;
-}
-
-
-
-.list {
-  width: 100%;
-  list-style: none;
-  margin: 0; 
-  padding: 0;
-  border: 1px solid #eee;
-  &-item{
-    &-header {
-      background-color: #fafafa;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-      > span {
-        width: 25%;
-        padding: 12px 8px;
-      }
-    }
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #eee;
-    transition: background-color 0.3s ease-out;
-    > span {
-      width: 25%;
-      padding: 12px 8px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    &:hover {
-      background-color: #fafafa;
-    }
-    
-  }
-}
-
-.no-items-found {
-  text-align: center;
-  img {
-    width: 150px;
-  }
 }

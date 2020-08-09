@@ -10,4 +10,5 @@ module.exports = {
   env: {
     AUTH_NAMESPACE: process.env.AUTH_NAMESPACE,
   },
+  generateEtags: false,
 };

@@ -39,6 +39,6 @@ export async function getStaticProps() {
   const json = await new ProcessApi().getAll();
   return {
     props: { process: json.data },
-    unstable_revalidate: 30,
+    unstable_revalidate: 1,
   };
 }

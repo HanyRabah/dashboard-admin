@@ -34,6 +34,6 @@ export async function getStaticProps() {
   const tractors = json.data;
   return {
     props: { tractors },
-    unstable_revalidate: 30,
+    unstable_revalidate: 1,
   };
 }

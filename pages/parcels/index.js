@@ -37,6 +37,6 @@ export async function getStaticProps() {
   const parcels = json.data;
   return {
     props: { parcels },
-    unstable_revalidate: 30,
+    unstable_revalidate: 1,
   };
 }

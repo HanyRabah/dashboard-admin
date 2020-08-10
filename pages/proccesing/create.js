@@ -32,7 +32,7 @@ const ParcelProcces = ({ tractors, parcels: intialParcels, process }) => {
 
 export default withAuth(ParcelProcces)();
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const tractors = await new TractorApi().getAll();
   const parcels = await new ParcelApi().getAll();
   const process = await new ProcessApi().getAll();

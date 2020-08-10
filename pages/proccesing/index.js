@@ -35,10 +35,9 @@ const Parcels = ({ process }) => {
 };
 export default withAuth(Parcels)();
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const json = await new ProcessApi().getAll();
   return {
-    props: { process: json.data },
-    unstable_revalidate: 1,
+    props: { process: json.data }
   };
 }

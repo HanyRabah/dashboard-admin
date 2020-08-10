@@ -29,11 +29,10 @@ const Tractors = ({ tractors }) => {
 
 export default withAuth(Tractors)();
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const json = await new TractorApi().getAll();
   const tractors = json.data;
   return {
-    props: { tractors },
-    unstable_revalidate: 1,
+    props: { tractors }
   };
 }

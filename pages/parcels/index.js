@@ -32,11 +32,10 @@ const Parcels = ({ parcels }) => {
 };
 export default withAuth(Parcels)();
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const json = await new ParcelApi().getAll();
   const parcels = json.data;
   return {
-    props: { parcels },
-    unstable_revalidate: 1,
+    props: { parcels }
   };
 }
